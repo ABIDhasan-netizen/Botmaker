@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: bot-panel
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_URL
+        sync: false   # after first deploy, set this to your live Render URL, e.g. https://bot-panel.onrender.com
+      - key: APP_SECRET
+        generateValue: true
+    disk:
+      name: bot-panel-storage
+      mountPath: /var/www/html/storage
+      sizeGB: 1

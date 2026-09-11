@@ -1,0 +1,6 @@
+storage/database.sqlite
+storage/bots/*
+!storage/bots/.gitkeep
+storage/logs/*
+!storage/logs/.gitkeep
+.env
